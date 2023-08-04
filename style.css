@@ -1,0 +1,265 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: var(--bgColor);
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+li{
+    list-style: none;
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(assets/fonts/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+:root{
+    --bgColor:#545066;
+    --fontColor: #ffffff;
+}
+
+.container{
+    max-width: 60rem;
+    height: 40rem;
+    background-color: var(--fontColor);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem ;
+    border-radius: 2rem;
+    box-shadow: 0px 5px 5px #333 ;
+}
+
+.formulario-update{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 30rem;
+}
+
+.title-form{
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: Roboto-Bold;
+    margin-top: 3rem;
+}
+
+.formulario-update  h3, li{
+    font-family: Roboto-Regular;
+}
+
+.formulario-update h3{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.formulario-update li{
+    font-size: 1rem;
+    padding: .5rem 0rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.formulario-update img{
+    width: 1rem;
+    height: auto;
+    margin-right: 1rem;
+   
+}
+
+.img-formulario{
+  width: 100%;
+  height: 100%;
+}
+
+.formulario-email{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-email label{
+    font-size: 1rem;
+    font-family: Roboto-Bold;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+input, .subscription{
+    padding: 1rem;
+    width: 100%;
+    border-radius: .5rem;
+    border: 1px solid #cccc;
+    margin-bottom: 1rem;
+    font-family: Roboto-Bold;
+    font-size: 1rem;
+}
+
+.formulario-email input:focus{
+    outline: none;
+    background-color: none;
+}
+
+.Error{
+    background-color: rgba(253, 162, 162, 0.5);
+    border: 1px solid #f4a5a5;
+    color: #f18585;
+}
+
+.validError{
+    color: #f18585;
+}
+
+.subscription{
+    background-color: #26263a;
+    color: var(--fontColor);
+}
+
+.subscription:hover{
+    cursor: pointer;
+    background: linear-gradient(90deg, rgba(191,25,84,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+/* Estilos para la card Sucess */
+
+.card-sucess{
+    width: 33rem;
+    height: auto;
+    padding: 3.5rem;
+    background-color: var(--fontColor);
+    border-radius: 2rem;
+}
+
+.card-sucess img{
+    width: 3.5rem;
+    padding: 1rem 0rem;
+}
+
+.card-sucess h2{
+    font-size: 3rem;
+    font-family: Roboto-Bold;
+    margin-bottom: 1rem;
+}
+
+.card-sucess p{
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-sucess button{
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-size: 1.2rem;
+    padding: 1.5rem 0rem;
+    color: var(--fontColor);
+    font-family: Roboto-Bold;
+    border-radius: .5rem;
+    box-shadow: 0px 5px 10px rgba(239, 30, 87, .4);
+    background: linear-gradient(291deg, rgba(255,118,72,1) 36%, rgba(239,30,87,0.9809173669467787) 59%);
+
+}    
+
+.card-sucess button:focus{
+    outline: none;
+}
+
+.card-sucess button:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:500px){
+    .container{
+       min-height: 100vh;
+       flex-direction: column-reverse;
+       padding: 0;
+    }
+
+    .formulario-update{
+        width: 100%;
+        padding: 3rem 1.5rem;
+    }
+
+    .title-form{
+        font-size: 3.5rem;
+        margin-top: 0;
+    }
+
+    .formulario-update h3{
+        font-size: 1.8rem;
+        padding: 1rem 0rem;
+    }
+
+    .formulario-update li{
+        font-size: 1.8rem;
+        margin-top: 1rem;
+    }
+
+    .formulario-update img{
+        width: 2rem;
+    }
+
+    .formulario-email label{
+        font-size: 1.5rem;
+    }
+
+    .formulario-email input, .subscription{
+        font-size: 1.5rem;
+        padding: 1.8rem;
+    }
+
+    /* Responsive de la card sucess*/
+    body{
+        display: block;
+    }
+
+    .card-sucess{
+        width: 100%;
+        min-height: 100%;
+        border-radius: 0rem;
+    }
+
+    .card-sucess img{
+        width: 7rem;
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+    }
+
+    .card-sucess h2{
+        font-size: 4rem;    
+        font-family: Roboto-Bold;
+    }
+
+    .card-sucess p{
+        font-size: 2rem;
+    }
+
+    .card-sucess button{
+        margin-top: 20rem;
+        background: #26263a;
+        box-shadow: none;
+        padding: 2rem 0rem;
+        font-size: 1.5rem;
+    }
+
+
+}
